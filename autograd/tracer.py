@@ -21,7 +21,7 @@ def trace(start_node, fun, x):
         start_box = new_box(x, trace_id, start_node)
 
         # Apply fun() to boxed value. This will carry the value throughout the
-        # comutation as well as the box.
+        # computation as well as the box.
         end_box = fun(start_box)
 
         if isbox(end_box) and end_box._trace_id == start_box._trace_id:
